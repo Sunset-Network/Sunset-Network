@@ -23,13 +23,15 @@ const input = document.querySelector("input");
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    window.navigator.serviceWorker
-      .register("/uv.js", {
-        scope: __uv$config.prefix,
-      })
-      .then(() => {
-        const url = search(address.value, searchEngine.value);
-        var encodedUrl = "/uv/" + __uv$config.encodeUrl(url);
-        location.href = encodedUrl;
-      });
-    })
+  
+    try {
+      await registerSW();
+    } catch (err) {
+      error.textContent = "Failed to register service worker.";
+      errorCode.textContent = err.toString();
+      throw err;
+    }
+  
+    const url = search(address.value, searchEngine.value);
+    location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
+  });
