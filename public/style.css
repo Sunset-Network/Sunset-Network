@@ -51,7 +51,7 @@ main {
 
 /* gradient background */
 
-.body{
+body {
     background: fixed;
     background-image: linear-gradient(#3565a9, #458796, #d29128, #c9c934);
 }
@@ -278,6 +278,24 @@ a:visited {
 }
 
 .Native button {
+    display: inline-flex;
+    margin: 15px;
+    height: auto;
+    width: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 900;
+    transform: scaleY(1.2);
+    border: 5px solid;
+    border-radius: 10px;
+    color: white;
+    background: navy;
+    border-color: black;
+}
+
+.CosomoPlatform button {
     display: inline-flex;
     margin: 15px;
     height: auto;
