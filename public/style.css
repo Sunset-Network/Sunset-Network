@@ -124,6 +124,33 @@ select:-webkit-autofill:focus {
     transition: background-color 5000s ease-in-out 0s;
 }
 
+/* Remove underline for visited links */
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+/* nav icons */
+.Home-icon {
+    margin: 7px;
+}
+
+.Settings-icon {
+    margin: 7px;
+}
+
+.Roadmap-icon {
+    margin: 7px;
+}
+
+.Developers-icon {
+    margin: 7px;
+}
+
+/* home page*/
 .proxy {
     padding: 15px;
     border-radius: 15px;
@@ -158,15 +185,6 @@ select:-webkit-autofill:focus {
     font-weight: 750;
     font-family: Poppins;
     color: lightgray;
-}
-
-/* Remove underline for visited links */
-a {
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
 }
 
 /* settings page */
