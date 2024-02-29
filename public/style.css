@@ -233,13 +233,13 @@ a:visited {
 .blayout {
     display: flex;
     justify-content: center;
-
+    flex-wrap: wrap
 }
 
 .blayout :hover {
     color: darkcyan;
     text-decoration-line: underline;
-    transition: 1s;
+    transition: 0.3s;
 }
 
 .dctylayout {
@@ -359,6 +359,42 @@ a:visited {
 }
 
 .CosomoPlatform button {
+    display: inline-flex;
+    margin: 15px;
+    height: auto;
+    width: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 900;
+    transform: scaleY(1.2);
+    border: 5px solid;
+    border-radius: 10px;
+    color: white;
+    background: navy;
+    border-color: black;
+}
+
+.PA button {
+    display: inline-flex;
+    margin: 15px;
+    height: auto;
+    width: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 900;
+    transform: scaleY(1.2);
+    border: 5px solid;
+    border-radius: 10px;
+    color: white;
+    background: navy;
+    border-color: black;
+}
+
+.GalacticNet button {
     display: inline-flex;
     margin: 15px;
     height: auto;
