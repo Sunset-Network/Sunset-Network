@@ -149,6 +149,10 @@ a:visited {
     margin: 7px;
 }
 
+.Game-icon {
+    margin: 7px;
+}
+
 /* home page*/
 .proxy {
     padding: 15px;
@@ -186,8 +190,15 @@ a:visited {
     color: lightgray;
 }
 
-/* settings page */
-
+/* games page */
+.CS {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 100px;
+    font-weight: 750;
+    font-family: Poppins;
+    color: lightgray;
+}
 
 /* roadmap page */
 
@@ -227,6 +238,8 @@ a:visited {
     font-size: 20px;
     font-weight: 600;
 }
+
+/* settings page */
 
 /* developer&partners page (TY AMPLIFY)*/
 .blayout {
