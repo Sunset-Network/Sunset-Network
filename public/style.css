@@ -15,6 +15,16 @@ main {
     margin: 0px;
 }
 
+/* Coming soon */
+.CS {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 100px;
+    font-weight: 750;
+    font-family: Poppins;
+    color: lightgray;
+}
+
 /* Join discord */
 
 .SNdiscordlayout a {
@@ -191,13 +201,64 @@ a:visited {
 }
 
 /* games page */
-.CS {
+
+.Appspageh1 {
     text-align: center;
-    font-size: 50px;
-    margin-top: 100px;
-    font-weight: 750;
-    font-family: Poppins;
-    color: lightgray;
+    font-size: 60px;
+    margin-top: 20px;
+    font-weight: 900;
+    font-family: ubuntu;
+}
+
+.appslayout {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 100px;
+}
+
+.appbutton button {
+    font-size: 20px;
+    font-weight: 900;
+    border: 5px solid;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    color: white;
+    background-image: linear-gradient(#3565a9, #458796, #d29128, #c9c934);
+    border-color: black;
+    margin: 20px;
+}
+.appbutton button :hover{
+    
+}
+
+.Gamespageh1 {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 20px;
+    font-weight: 900;
+    font-family: ubuntu;
+}
+
+.gamelayout {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 100px;
+}
+
+.gamebutton button {
+    font-size: 20px;
+    font-weight: 900;
+    border: 5px solid;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    color: white;
+    background-image: linear-gradient(#3565a9, #458796, #d29128, #c9c934);
+    border-color: black;
+    margin: 20px;
 }
 
 /* roadmap page */

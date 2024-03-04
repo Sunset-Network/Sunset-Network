@@ -37,6 +37,10 @@ app.get('/roadmap', (req, res) => {
     res.sendFile(path.join(process.cwd(), '/public/roadmap.html'));
 });
 
+app.get('/games', (req, res) => {
+    res.sendFile(path.join(process.cwd(), '/public/games.html'));
+});
+
 server.on('request', (req, res) => {
     if (bareServer.shouldRoute(req)) {
         bareServer.routeRequest(req, res)
