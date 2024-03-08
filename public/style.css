@@ -260,7 +260,11 @@ a:visited {
     border-color: black;
     margin: 20px;
 }
-
+/* discord page*/
+.discord-embed{
+display: contents;
+justify-content: center;
+}
 /* roadmap page */
 
 .roadtxt {
