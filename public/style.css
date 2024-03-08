@@ -229,9 +229,8 @@ a:visited {
     border-color: black;
     margin: 20px;
 }
-.appbutton button :hover{
-    
-}
+
+.appbutton button :hover {}
 
 .Gamespageh1 {
     text-align: center;
@@ -260,11 +259,32 @@ a:visited {
     border-color: black;
     margin: 20px;
 }
+
 /* discord page*/
-.discord-embed{
-display: contents;
-justify-content: center;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
+
+.discord-embed-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.discord-embed {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 /* roadmap page */
 
 .roadtxt {
