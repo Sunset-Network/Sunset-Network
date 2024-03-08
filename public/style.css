@@ -262,14 +262,6 @@ a:visited {
 
 /* discord page*/
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
 .discord-embed-container {
     position: fixed;
     top: 0;
@@ -284,6 +276,27 @@ html, body {
     height: 100%;
     border: none;
 }
+
+.dback :hover {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.616);
+}
+
+.dback {
+    margin: 15px;
+    position: absolute;
+    float: left;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.425);
+    -webkit-text-fill-color: #3565a9;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    font-family: poppins;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+
 
 /* roadmap page */
 
