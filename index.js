@@ -41,6 +41,10 @@ app.get('/games', (req, res) => {
     res.sendFile(path.join(process.cwd(), '/public/games.html'));
 });
 
+app.get('/discord', (req, res) => {
+    res.sendFile(path.join(process.cwd(), '/public/discord.html'));
+});
+
 server.on('request', (req, res) => {
     if (bareServer.shouldRoute(req)) {
         bareServer.routeRequest(req, res)

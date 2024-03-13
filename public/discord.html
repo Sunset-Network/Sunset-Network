@@ -13,23 +13,45 @@
     <script src="https://kit.fontawesome.com/52676eb1e5.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="settings">
+<body class="discordp">
 
     <div class="discord-embed-container">
-        <iframe class="discord-embed" src="https://e.widgetbot.io/channels/1208603061052903505/1215495447703986246"
-            allow="clipboard-write; fullscreen"></iframe>
+        <iframe class="discord-embed" src="" allow="clipboard-write; fullscreen"></iframe>
     </div>
 
-
-    <div class="dback">
-        <a href="/index.html">
-            <div class="dbacktxt" style="padding: 10px;">
-                <i class="fa-solid fa-angle-left fa-2xl" style="color: #000000;"></i>
-                Go Back
-            </div>
-        </a>
+    <div>
+        <div class="dback">
+            <a class="dbackbutton" href="/index.html">
+                <div style="padding: 10px; color: #3565a9; border-radius: 10px; text-shadow: 2px 2px 2px #888; box-shadow: 3px 3px 3px #111111; box-shadow: 3px 3px 3px #111111;">
+                    <i class="fa-solid fa-angle-left fa-2xl" style="color: #000000;"></i>
+                    Go Back
+                    </i>
+                </div>
+            </a>
+        </div>
     </div>
 
+    <script src="uv/uv.bundle.js" defer></script>
+    <script src="uv/uv.config.js" defer></script>
+
+
+    <script type="text/javascript" defer>
+        function discord(val) {
+            window.navigator.serviceWorker
+                .register("/uv.js", {
+                    scope: __uv$config.prefix,
+                })
+                .then(() => {
+                    var proxiedwidgetbot = __uv$config.prefix + __uv$config.encodeUrl("https://e.widgetbot.io/channels/1208603061052903505/1215495447703986246");
+                    var iframe = document.querySelector("iframe.discord-embed");
+                    iframe.src = proxiedwidgetbot;
+                });
+
+        }
+        window.onload = function () {
+            discord();
+        }
+    </script>
 </body>
 
 </html>

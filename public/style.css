@@ -5,6 +5,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* gloabl shit*/
+
+button {
+    cursor: pointer;
+}
 
 /* forground for page */
 body {
@@ -62,6 +67,10 @@ main {
     right: 0;
 }
 
+.SNdiscord:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
 
 /* navagational bar */
 
@@ -91,6 +100,8 @@ main {
 .navbar a:hover {
     background-color: darkorange;
     border-radius: 10px;
+    transform: scale(1.05);
+    transition: 0.5s;
 }
 
 .navbar li {
@@ -130,7 +141,7 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     border: 3px solid black;
     background-color: rgba(224, 224, 224, 0.25);
-    transition: background-color 5000s ease-in-out 0s;
+    transition: background-color 500zz0s ease-in-out 0s;
 }
 
 /* Remove underline for visited links */
@@ -228,9 +239,8 @@ a:visited {
     background-image: linear-gradient(#3565a9, #458796, #d29128, #c9c934);
     border-color: black;
     margin: 20px;
+    cursor: pointer;
 }
-
-.appbutton button :hover {}
 
 .Gamespageh1 {
     text-align: center;
@@ -277,26 +287,23 @@ a:visited {
     border: none;
 }
 
-.dback :hover {
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.616);
-}
-
 .dback {
-    margin: 15px;
+    margin: 10px;
     position: absolute;
     float: left;
     border-radius: 10px;
-    background-color: rgba(128, 128, 128, 0.425);
-    -webkit-text-fill-color: #3565a9;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 2px;
+    background-color: rgba(128, 128, 128, 0.6);
     font-family: poppins;
     font-weight: 700;
     font-size: 35px;
+    color: #3565a9;
 }
 
-
+.dbackbutton :hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.025);
+    transition: 0.5s;
+}
 
 /* roadmap page */
 
@@ -340,16 +347,14 @@ a:visited {
 /* settings page */
 
 /* developer&partners page (TY AMPLIFY)*/
+.blayout :hover {
+    color: #61a3ff;
+}
+
 .blayout {
     display: flex;
     justify-content: center;
     flex-wrap: wrap
-}
-
-.blayout :hover {
-    color: darkcyan;
-    text-decoration-line: underline;
-    transition: 0.3s;
 }
 
 .dctylayout {
