@@ -5,19 +5,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-/* gloabl shit*/
 
+/* global styles */
 button {
     cursor: pointer;
 }
-
-/* forground for page */
-body {
-    margin: 0px;
-}
-
+ 
+/* foreground for page */
+body,
 main {
-    margin: 0px;
+    margin: 0;
 }
 
 /* Coming soon */
@@ -31,7 +28,6 @@ main {
 }
 
 /* Join discord */
-
 .SNdiscordlayout a {
     color: black;
 }
@@ -53,6 +49,10 @@ main {
     /* above adjused to change the height from the join now text */
 }
 
+body.gradientBackground .SNdiscordlayout a {
+    color: rgb(206, 192, 192);
+}
+
 .SNdiscord {
     font-family: Poppins;
     border: black 2px solid;
@@ -67,56 +67,125 @@ main {
     right: 0;
 }
 
+body.gradientBackground .SNdiscord {
+    border: white 2px solid;
+    color: rgb(206, 192, 192);
+    box-shadow: 0 0 50px white;
+    background-image: linear-gradient(#070720, #0f296a, #3565a9);
+}
+
 .SNdiscord:hover {
     transform: scale(1.05);
     transition: 0.5s;
 }
 
-/* navagational bar */
+/* navbar */
+
+.navbar {
+    position: relative; /* Ensure relative positioning for absolute positioning within */
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 2px; /* Increase padding for a thicker orange part */
+    background-color: #e38811;
+    border-radius: 0 0 10px 10px ; /* Round bottom-left and bottom-right corners */
+}
+
+/* Logo */
+.logo {
+    position: absolute; /* Position absolutely */
+    left: 20px; /* Adjust left position as needed */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    font-family: 'Rubik', sans-serif; /* Update font family */
+    font-size: larger;
+    font-weight: bold; /* Update font weight */
+    color: #FFD700; /* Update text color */
+}
+
+.logo img {
+    width: 40px; /* Adjust logo width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add space between logo and text */
+    border: 2.5px solid #FFD700; /* Add border around logo */
+    border-radius: 50%; /* Make logo circular */
+}
 
 .navbar ul {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    font-family: Rubik;
-    font-weight: 700;
     list-style-type: none;
-    background-color: #e38811;
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-}
-
-.navbar a {
-    color: #e6e612;
-    text-decoration: none;
-    padding: 15px;
+    padding: 0;
+    margin: 0;
     display: flex;
-    align-items: center;
-    transition: 0.3s;
-}
-
-.navbar a:hover {
-    background-color: darkorange;
-    border-radius: 10px;
-    transform: scale(1.05);
-    transition: 0.5s;
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Center items vertically */
 }
 
 .navbar li {
-    float: left;
+    margin-right: 25px; /* Increase spacing between links */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 18px; /* Adjust font size as needed */
+    font-weight: bold; /* Make text bold */
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.navbar ul li,
+.navbar ul li a {
+    display: block;
+    padding: 8px;
+    transition: 0.5s;
+}
+
+.navbar:hover ul li:hover,
+.navbar:hover ul li:hover a {
+    transition: 0.5s;
+    background-color: darkorange;
+    border-radius: 10px;
+    transform: scale(1.05);
+}
+
+/* Adjust navbar colors based on the theme */
+
+body.gradientBackground .logo img {
+    border: 2.5px solid white;
+}
+
+body.gradientBackground .navbar {
+    background-color: #3565a9;
+}
+
+
+body.gradientBackground .navbar a{
+    color: #fff;
+}
+
+body.gradientBackground .logo{
+    color: #fff;
+}
+
+body.gradientBackground .navbar:hover ul li:hover a {
+    background-color: #5a97d8;
+    /* Change background color on hover in dark mode */
+}
+
+body.gradientBackground .navbar:hover ul li:hover{
+    background-color: #5a97d8;
+    /* Change background color on hover in dark mode */
+
 }
 
 /* gradient background */
-
 body {
     background: fixed;
     background-image: linear-gradient(#3565a9, #458796, #d29128, #c9c934);
 }
 
 /* home page */
-
 .home-main {
     margin-top: 150px;
 }
@@ -154,24 +223,387 @@ a:visited {
 }
 
 /* nav icons */
-.Home-icon {
-    margin: 7px;
-}
-
-.Settings-icon {
-    margin: 7px;
-}
-
-.Roadmap-icon {
-    margin: 7px;
-}
-
-.Developers-icon {
-    margin: 7px;
-}
-
+.Home-icon,
+.Settings-icon,
+.Roadmap-icon,
+.Developers-icon,
 .Game-icon {
     margin: 7px;
+}
+
+/* settings page */
+
+.STXT {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 75px;
+    font-weight: 700;
+    margin: 00;
+}
+
+.settingsalign {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.settingspagepleasework {
+    justify-content: center;
+}
+
+.SButtonsss {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.SButtonsss :hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.APB {
+    justify-content: center;
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 725;
+    background-color: #ffffff2a;
+    color: white;
+    border: transparent 0px solid;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.CLB {
+    justify-content: center;
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 725;
+    background-color: #ffffff2a;
+    color: white;
+    border: transparent 0px solid;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.PRB {
+    justify-content: center;
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 725;
+    background-color: #ffffff2a;
+    color: white;
+    border: transparent 0px solid;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: flex;
+}
+
+.SETtext {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.Slayout {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: 250px;
+    margin-left: 250px;
+}
+
+.Sbutton {
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 30px;
+    border-radius: 25px;
+    background-color: #ffffff2a;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+    margin: 10px;
+}
+
+.Changetheeeme {
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 30px;
+    border-radius: 25px;
+    background-color: #ffffff2a;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+    margin: 10px;
+}
+
+.paniicbuttonn {
+    text-align: center;
+    width: 300px;
+    height: 175px;
+    padding: 30px;
+    border-radius: 25px;
+    background-color: #ffffff2a;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+    margin: 10px;
+}
+
+
+.Selecthotkeyyyyy {
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 30px;
+    border-radius: 25px;
+    background-color: #ffffff2a;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+    margin: 10px;
+}
+
+.redirectchoice {
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 30px;
+    border-radius: 25px;
+    background-color: #ffffff2a;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+    margin: 10px;
+}
+
+.prxyyytype {
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 30px;
+    border-radius: 25px;
+    background-color: #ffffff2a;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+    margin: 10px;
+}
+
+.rtabtxt {
+    font-size: 15px;
+    font-family: Poppins;
+    font-weight: 700;
+}
+
+#theme {
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 725;
+    background-color: #007bff;
+    color: white;
+    border: black 3px solid;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#proxytpe {
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 725;
+    background-color: #007bff;
+    color: white;
+    border: black 3px solid;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.proxyoptions {
+    font: 800;
+}
+
+.gradientButton {
+    padding: 20px 40px;
+    font-size: 30px;
+    font-weight: 700;
+    background-color: #007bff;
+    color: white;
+    border: black 3px solid;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.gradientButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.SBT {
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 750;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+
+#change-URL-btn {
+    padding: 20px 30px;
+    margin: 10px;
+    font-size: 17.5px;
+    font-weight: 700;
+    background-color: #007bff;
+    color: white;
+    border: 3px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#change-hotkey-btn {
+    padding: 20px 30px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #007bff;
+    color: white;
+    border: 3px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#change-hotkey-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+#change-URL-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+#hotkey-input {
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+.Panbutton {
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: 750;
+    background-color: #007bff;
+    color: white;
+    border: black 3px solid;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.Baseofsbutton button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+body.gradientBackground .STXT {
+    color: white;
+}
+
+body.gradientBackground .APB {
+    box-shadow: 0 0 30px rgba(153, 243, 255);
+}
+
+body.gradientBackground .CLB {
+    box-shadow: 0 0 30px rgba(153, 243, 255);
+}
+
+body.gradientBackground .PRB {
+    box-shadow: 0 0 30px rgba(153, 243, 255);
+}
+
+body.gradientBackground #change-hotkey-btn {
+    border: rgba(60, 214, 235, 0.75) 3px solid;
+}
+
+body.gradientBackground #change-URL-btn {
+    border: rgba(60, 214, 235, 0.75) 3px solid;
+}
+
+body.gradientBackground #hotkey-input {
+    color: black;
+    background: rgba(255, 255, 255, 0.1);
+    border: rgba(60, 214, 235, 0.75) 3px solid;
+}
+
+body {
+    background: fixed;
+    background-image: linear-gradient(#3565a9, #458796, #d29128, #c9c934);
+}
+
+body.gradientBackground {
+    background-image: linear-gradient(#070720, #0f296a, #3565a9);
+}
+
+body.gradientBackground .SETtext {
+    color: white;
+}
+
+body.gradientBackground .rtabtxt {
+    color: white;
+}
+
+body.gradientBackground .SBT {
+    color: white;
+}
+
+body.gradientBackground .gradientButton {
+    border: rgba(60, 214, 235, 0.75) 3px solid;
+}
+
+body.gradientBackground #proxytpe {
+    border: rgba(60, 214, 235, 0.75) 3px solid;
+}
+
+body.gradientBackground #theme {
+    border: rgba(60, 214, 235, 0.75) 3px solid;
+}
+
+body.gradientBackground .Panbutton {
+    border: rgba(60, 214, 235, 0.75) 3px solid;
+}
+
+body.gradientBackground .Changetheeeme {
+    box-shadow: 0 0 30px rgba(153, 243, 255, 0.750);
+}
+
+body.gradientBackground .paniicbuttonn {
+    box-shadow: 0 0 30px rgba(153, 243, 255, 0.750);
+}
+
+body.gradientBackground .Selecthotkeyyyyy {
+    box-shadow: 0 0 30px rgba(153, 243, 255, 0.750);
+}
+
+body.gradientBackground .redirectchoice {
+    box-shadow: 0 0 30px rgba(153, 243, 255, 0.750);
+}
+
+body.gradientBackground .prxyyytype {
+    box-shadow: 0 0 30px rgba(153, 243, 255, 0.750);
 }
 
 /* home page*/
@@ -185,11 +617,29 @@ a:visited {
     color: black;
     box-shadow: 5px 5px 8px black;
     background-color: rgba(224, 224, 224, 0.15);
-
 }
 
+/* Placeholder text color */
 .proxy::placeholder {
     color: black;
+}
+
+/* Styles for elements with the class "proxy" when dark mode is active */
+body.gradientBackground .proxy {
+    color: ivory;
+    border: 3px solid rgb(223, 223, 195);
+    box-shadow: 5px 5px 8px rgb(192, 186, 171);
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+/* Placeholder text color */
+.proxy::placeholder {
+    color: black;
+}
+
+/* Styles for placeholder text when dark mode is active */
+body.gradientBackground .proxy::placeholder {
+    color: ivory;
 }
 
 .pname {
@@ -216,9 +666,13 @@ a:visited {
 .Appspageh1 {
     text-align: center;
     font-size: 60px;
-    margin-top: 20px;
+    margin: 75px;
     font-weight: 900;
     font-family: ubuntu;
+}
+
+body.gradientBackground .Appspageh1 {
+    color: white;
 }
 
 .appslayout {
@@ -242,12 +696,21 @@ a:visited {
     cursor: pointer;
 }
 
+body.gradientBackground .appbutton button {
+    border-color: grey;
+    background-image: linear-gradient(#070720, #0f296a, #3565a9);
+}
+
 .Gamespageh1 {
     text-align: center;
     font-size: 60px;
     margin-top: 20px;
     font-weight: 900;
     font-family: ubuntu;
+}
+
+body.gradientBackground .Gamespageh1 {
+    color: white;
 }
 
 .gamelayout {
@@ -268,6 +731,11 @@ a:visited {
     background-image: linear-gradient(#3565a9, #458796, #d29128, #c9c934);
     border-color: black;
     margin: 20px;
+}
+
+body.gradientBackground .gamebutton button {
+    border-color: grey;
+    background-image: linear-gradient(#070720, #0f296a, #3565a9);
 }
 
 /* discord page*/
@@ -320,6 +788,11 @@ a:visited {
     box-shadow: 0 0 50px rgb(0, 0, 0);
 }
 
+body.gradientBackground .roadtxt {
+    box-shadow: 0 0 50px rgb(255, 255, 255);
+    color: white;
+}
+
 .rtitle1 {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -344,9 +817,8 @@ a:visited {
     font-weight: 600;
 }
 
-/* settings page */
-
 /* developer&partners page (TY AMPLIFY)*/
+
 .blayout :hover {
     color: #61a3ff;
 }
@@ -370,6 +842,10 @@ a:visited {
     font-family: ubuntu;
 }
 
+body.gradientBackground .tydev {
+    color: white;
+}
+
 .dcthanks {
     border-radius: 10px;
     margin: 10px;
@@ -381,6 +857,10 @@ a:visited {
     margin-top: 20px;
     transform: scaleY(1.25);
     font-family: ubuntu;
+}
+
+body.gradientBackground .partner {
+    color: white;
 }
 
 .moonlight button {
@@ -510,6 +990,42 @@ a:visited {
 }
 
 .GalacticNet button {
+    display: inline-flex;
+    margin: 15px;
+    height: auto;
+    width: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 900;
+    transform: scaleY(1.2);
+    border: 5px solid;
+    border-radius: 10px;
+    color: white;
+    background: navy;
+    border-color: black;
+}
+
+.Pblocker button {
+    display: inline-flex;
+    margin: 15px;
+    height: auto;
+    width: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 900;
+    transform: scaleY(1.2);
+    border: 5px solid;
+    border-radius: 10px;
+    color: white;
+    background: navy;
+    border-color: black;
+}
+
+.KittyCatClub button {
     display: inline-flex;
     margin: 15px;
     height: auto;

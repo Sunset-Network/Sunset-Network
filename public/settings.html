@@ -10,75 +10,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="/style.css" rel="stylesheet" type="text/css">
+    <script src="settings.js" defer></script>
+    <script src="hotkey.js" defer></script>
+
 
     <nav class="navbar">
+        <div class="logo">
+            <a href="https://discord.gg/GPFwfVNEhn" target="_blank">
+                <img src="Icons/logo.png" alt="Sunset-Network Logo">
+                <span>Sunset-Network</span>
+            </a>
+        </div>
         <ul>
-            <li>
-                <a href="/index.html">
-                    <div class="Home-icon">
-                        <i class="fa-solid fa-house fa-2xl" style="color: #000000; margin: 5px;"></i>
-                        Home
-                    </div>
-                </a>
-            </li>
-
-            <li>
-                <a href="/games.html">
-                    <div class="Game-icon">
-                        <i class="fa-solid fa-gamepad fa-2xl" style="color: #000000; margin: 5px;"></i>
-                        Games
-                    </div>
-                </a>
-            </li>
-
-            <li>
-                <a href="/discord.html">
-                    <div class="Game-icon">
-                        <i class="fa-brands fa-discord fa-2xl" style="color: #000000; margin: 5px;"></i>
-                        Discord
-                    </div>
-                </a>
-            </li>
-
-            <li>
-                <a href="/roadmap.html">
-                    <div class="Roadmap-icon">
-                        <i class=" fa-solid fa-map fa-2xl" style="color: #000000; margin: 5px;"></i>
-                        Roadmap
-                    </div>
-                </a>
-            </li>
-
-            <li>
-                <a href="/settings.html">
-                    <div class="Settings-icon">
-                        <i class="fa-solid fa-gear fa-2xl" style="color: #000000; margin: 5px;"></i>
-                        Settings
-                    </div>
-                </a>
-            </li>
-
-            <li>
-                <a href="/developers&partners.html">
-                    <div class="Developers-icon">
-                        <i class="fa-solid fa-users fa-2xl" style="color: #000000; margin: 5px;"></i>
-                        Developers
-                    </div>
-                </a>
-            </li>
+            <li><a href="/index.html"><i class="fa-solid fa-house fa-2xl"
+                        style="color: #000000; margin: 5px;"></i>Home</a></li>
+            <li><a href="/games.html"><i class="fa-solid fa-gamepad fa-2xl"
+                        style="color: #000000; margin: 5px;"></i>Games</a></li>
+            <li><a href="/discord.html"><i class="fa-brands fa-discord fa-2xl"
+                        style="color: #000000; margin: 5px;"></i>Discord</a></li>
+            <li><a href="/roadmap.html"><i class="fa-solid fa-map fa-2xl"
+                        style="color: #000000; margin: 5px;"></i>Roadmap</a></li>
+            <li><a href="/settings.html"><i class="fa-solid fa-gear fa-2xl"
+                        style="color: #000000; margin: 5px;"></i>Settings</a></li>
+            <li><a href="/developers&partners.html"><i class="fa-solid fa-users fa-2xl"
+                        style="color: #000000; margin: 5px;"></i>Developers</a></li>
         </ul>
     </nav>
 
 </head>
 
-<body class="settings">
-    <main>
+<body class="Settingspgg">
 
-        <p class="CS">COMING SOON!!!</p>
+    <h1 class="STXT">Settings</h1>
+
+    <div class="settingspagepleasework">
+
+        <div class="SButtonsss">
+
+            <button class="APB" onclick="changeTab(0)">Apperance</button>
+            <button class="CLB" onclick="changeTab(1)">Cloaking</button>
+            <button class="PRB" onclick="changeTab(2)">Proxy</button>
+
+        </div>
+
+        <div class="settingsalign">
+
+            <div id="tab0" class="tab active">
+                <div class="Changetheeeme">
+                    <a class="Baseofsbutton">
+                        <p class="SBT"> Change Theme </p>
+                        <button id="changeGradient" class="gradientButton">Change Theme</button>
+                    </a>
+                </div>
+
+                <div class="Changetheeeme">
+                    <p class="SBT">Change Theme</p>
+                    <select id="theme" name="switch Theme">
+                        <option>Light Mode</option>
+                        <option>Dark Mode</option>
+                    </select>
+                </div>
 
 
-        
-    </main>
+            </div>
+
+            <div id="tab1" class="tab">
+
+                <div class="paniicbuttonn">
+                    <a class="Baseofsbutton">
+                        <p class="SBT"> Panic Button<br>
+                            <p class="rtabtxt"> (Redirects to about:blank) </p>
+                        </p>
+                        <button id="open-tab-btn" class="Panbutton">Click Me</button>
+                    </a>
+                </div>
+
+                <div class="Selecthotkeyyyyy">
+                    <p class="SBT">Select a Hotkey</p>
+                    <p class="rtabtxt">(To quick redirect to choosen URL)<br>(Defualts to google.com)</p>
+                    <input type="text" id="hotkey-input" placeholder="Press a key...">
+                    <br>
+                    <button id="change-hotkey-btn">Change Hotkey</button>
+                </div>
+
+                <div class="redirectchoice">
+                    <p class="SBT">Choose Redirect</p>
+                    <p class="rtabtxt">(Paste in URL you want hotkey to redirect to)</p>
+                    <input type="text" id="hotkey-input" placeholder="Paste URL here...">
+                    <br>
+                    <button id="change-URL-btn">Change Redirect URL</button>
+                </div>
+
+            </div>
+
+            <div id="tab2" class="tab">
+                <div class="prxyyytype">
+                    <p class="SBT">Proxy Type</p>
+                    <select id="proxytpe" name="switch Theme">
+                        <option class="proxyoptions">UltraViolet</option>
+                        <option>Dynamic</option>
+                        <option>Coming Soon</option>
+                        <option>Coming Soon</option>
+                    </select>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        let tabs = Array.from(document.getElementsByClassName('tab'));
+
+        function changeTab(index) {
+            tabs.forEach((tab, i) => {
+                tab.classList.toggle('active', i === index);
+            });
+        }
+    </script>
+
+    <script src="hotkey.js" defer></script>
+
 </body>
 
 </html>
