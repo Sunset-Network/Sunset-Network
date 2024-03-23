@@ -8,9 +8,28 @@
 
 /* global styles */
 button {
+    /* Resetting default button styles */
+    appearance: none;
+    -webkit-writing-mode: horizontal-tb !important;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
     cursor: pointer;
 }
- 
+
 /* foreground for page */
 body,
 main {
@@ -65,6 +84,7 @@ body.gradientBackground .SNdiscordlayout a {
     position: absolute;
     bottom: 0;
     right: 0;
+    transition: 0.5s;
 }
 
 body.gradientBackground .SNdiscord {
@@ -82,33 +102,49 @@ body.gradientBackground .SNdiscord {
 /* navbar */
 
 .navbar {
-    position: relative; /* Ensure relative positioning for absolute positioning within */
+    position: relative;
+    /* Ensure relative positioning for absolute positioning within */
     display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    padding: 2px; /* Increase padding for a thicker orange part */
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: center;
+    /* Center items vertically */
+    padding: 2px;
+    /* Increase padding for a thicker orange part */
     background-color: #e38811;
-    border-radius: 0 0 10px 10px ; /* Round bottom-left and bottom-right corners */
+    border-radius: 0 0 10px 10px;
+    /* Round bottom-left and bottom-right corners */
 }
 
 /* Logo */
 .logo {
-    position: absolute; /* Position absolutely */
-    left: 20px; /* Adjust left position as needed */
+    position: absolute;
+    /* Position absolutely */
+    left: 20px;
+    /* Adjust left position as needed */
     display: flex;
-    align-items: center; /* Center items vertically */
-    font-family: 'Rubik', sans-serif; /* Update font family */
+    align-items: center;
+    /* Center items vertically */
+    font-family: 'Rubik', sans-serif;
+    /* Update font family */
     font-size: larger;
-    font-weight: bold; /* Update font weight */
-    color: #FFD700; /* Update text color */
+    font-weight: bold;
+    /* Update font weight */
+    color: #FFD700;
+    /* Update text color */
 }
 
 .logo img {
-    width: 40px; /* Adjust logo width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Add space between logo and text */
-    border: 2.5px solid #FFD700; /* Add border around logo */
-    border-radius: 50%; /* Make logo circular */
+    width: 40px;
+    /* Adjust logo width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 10px;
+    /* Add space between logo and text */
+    border: 2.5px solid #FFD700;
+    /* Add border around logo */
+    border-radius: 50%;
+    /* Make logo circular */
 }
 
 .navbar ul {
@@ -116,22 +152,29 @@ body.gradientBackground .SNdiscord {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Center contents horizontally */
-    align-items: center; /* Center items vertically */
+    justify-content: center;
+    /* Center contents horizontally */
+    align-items: center;
+    /* Center items vertically */
 }
 
 .navbar li {
-    margin-right: 25px; /* Increase spacing between links */
+    margin-right: 25px;
+    /* Increase spacing between links */
 }
 
 .navbar a {
     text-decoration: none;
     color: #FFD700;
-    font-size: 18px; /* Adjust font size as needed */
-    font-weight: bold; /* Make text bold */
-    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    font-size: 18px;
+    /* Adjust font size as needed */
+    font-weight: bold;
+    /* Make text bold */
+    font-family: 'Poppins', sans-serif;
+    /* Use Poppins font */
     display: flex;
-    align-items: center; /* Center items vertically */
+    align-items: center;
+    /* Center items vertically */
 }
 
 .navbar ul li,
@@ -160,11 +203,11 @@ body.gradientBackground .navbar {
 }
 
 
-body.gradientBackground .navbar a{
+body.gradientBackground .navbar a {
     color: #fff;
 }
 
-body.gradientBackground .logo{
+body.gradientBackground .logo {
     color: #fff;
 }
 
@@ -173,7 +216,7 @@ body.gradientBackground .navbar:hover ul li:hover a {
     /* Change background color on hover in dark mode */
 }
 
-body.gradientBackground .navbar:hover ul li:hover{
+body.gradientBackground .navbar:hover ul li:hover {
     background-color: #5a97d8;
     /* Change background color on hover in dark mode */
 
@@ -649,7 +692,6 @@ body.gradientBackground .proxy::placeholder {
     font-family: Poppins;
     font-size: 60px;
     color: lightgray;
-    border: red;
 }
 
 .abttxt {
@@ -662,6 +704,42 @@ body.gradientBackground .proxy::placeholder {
 }
 
 /* games page */
+
+.moregamesbutton {
+    margin: 0 auto 20px;
+    /* Center horizontally and apply bottom margin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center vertically */
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: poppins;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-image: linear-gradient(#3565a9, #458796, #d29128, #c9c934);
+    background-size: 100% 100%;
+    /* Ensure background image covers the button */
+    border-radius: 15px;
+    outline: black 3px solid;
+    transition: 0.5s;
+    box-shadow: 0 0 30px black;
+}
+
+.moregamesbutton:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+body.gradientBackground .moregamesbutton {
+    color: white;
+    outline: white 3px solid;
+    box-shadow: 0 0 30px rgba(153, 243, 255);
+    background-image: linear-gradient(#070720, #0f296a, #3565a9);
+}
 
 .Appspageh1 {
     text-align: center;
@@ -738,6 +816,64 @@ body.gradientBackground .gamebutton button {
     background-image: linear-gradient(#070720, #0f296a, #3565a9);
 }
 
+/* more games page */
+
+.MGSTXTTT {
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    margin-top: 25px;
+    font-family: Poppins;
+    font-size: 60px;
+}
+
+
+.mgameslayoutt {
+    margin-top: 75px;
+}
+
+.Mgames {
+    margin: 30px auto 20px;
+    /* Center horizontally and apply bottom margin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center vertically */
+    height: 75px;
+    width: 350px;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: poppins;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-image: linear-gradient(to bottom right, #3565a9 0%, #458796 35%, #d29128 65%, #c9c934 100%);
+
+    background-size: 100% 100%;
+    /* Ensure background image covers the button */
+    border-radius: 15px;
+    outline: rgba(0, 0, 0, 0.753) 3px solid;
+    transition: 0.5s;
+    box-shadow: 0 0 30px black;
+}
+
+.Mgames:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+body.gradientBackground .Mgames {
+    color: white;
+    outline: white 3px solid;
+    box-shadow: 0 0 30px rgba(153, 243, 255);
+    background-image: linear-gradient(to bottom right, #070720 40%, #0f296a 60%, #3565a9 100%);
+
+}
+
+body.gradientBackground .MGSTXTTT {
+    color: white;
+}
+
 /* discord page*/
 
 .discord-embed-container {
@@ -800,7 +936,6 @@ body.gradientBackground .roadtxt {
     font-size: 40px;
     font-weight: 700;
     border-radius: 25px;
-
 }
 
 .rst {
@@ -879,6 +1014,8 @@ body.gradientBackground .partner {
     color: white;
     background: navy;
     border-color: black;
+    font-family: Ubuntu;
+    padding-right: 10px;
 }
 
 .snorlax button {
@@ -897,6 +1034,8 @@ body.gradientBackground .partner {
     color: white;
     background: navy;
     border-color: black;
+    font-family: Ubuntu;
+    padding-right: 10px;
 }
 
 .shadow button {
@@ -915,6 +1054,8 @@ body.gradientBackground .partner {
     color: white;
     background: navy;
     border-color: black;
+    font-family: Ubuntu;
+    padding-right: 10px;
 }
 
 .night button {
@@ -933,6 +1074,8 @@ body.gradientBackground .partner {
     color: white;
     background: navy;
     border-color: black;
+    font-family: Ubuntu;
+    padding-right: 10px;
 }
 
 .Native button {
@@ -951,6 +1094,8 @@ body.gradientBackground .partner {
     color: white;
     background: navy;
     border-color: black;
+    font-family: Ubuntu;
+    padding-right: 10px;
 }
 
 .CosomoPlatform button {
@@ -969,6 +1114,8 @@ body.gradientBackground .partner {
     color: white;
     background: navy;
     border-color: black;
+    font-family: Ubuntu;
+    padding-right: 10px;
 }
 
 .PA button {
@@ -987,6 +1134,8 @@ body.gradientBackground .partner {
     color: white;
     background: navy;
     border-color: black;
+    font-family: Ubuntu;
+    padding-right: 10px;
 }
 
 .GalacticNet button {
@@ -1005,6 +1154,8 @@ body.gradientBackground .partner {
     color: white;
     background: navy;
     border-color: black;
+    font-family: Ubuntu;
+    padding-right: 10px;
 }
 
 .Pblocker button {
@@ -1023,6 +1174,8 @@ body.gradientBackground .partner {
     color: white;
     background: navy;
     border-color: black;
+    font-family: Ubuntu;
+    padding-right: 10px;
 }
 
 .KittyCatClub button {
@@ -1041,4 +1194,6 @@ body.gradientBackground .partner {
     color: white;
     background: navy;
     border-color: black;
+    font-family: Ubuntu;
+    padding-right: 10px;
 }
