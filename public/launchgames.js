@@ -1,6 +1,6 @@
 function launch(val) {
     window.navigator.serviceWorker
-        .register("/uv.js", {
+        .register("/uv/sw.js", {
             scope: __uv$config.prefix,
         })
         .then(() => {
