@@ -7,6 +7,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 /* global styles */
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+    background-color: #131313; /* Light grey background */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background-color: #5e5e5e; /* Grey thumb color */
+    border-radius: 10px; /* Rounded borders */
+    width: 10px; /* Fixed width for the scrollbar */
+}
+
+/* Hide the scrollbar when not interacting with it */
+::-webkit-scrollbar {
+    width: 10px; /* Fixed width for the scrollbar */
+}
+
+
+
 button {
     /* Resetting default button styles */
     appearance: none;
@@ -431,6 +451,14 @@ a:visited {
     margin: 10px;
 }
 
+#redirect-url-input{
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
 .prxyyytype {
     text-align: center;
     width: auto;
@@ -840,7 +868,7 @@ body.gradientBackground .gamebutton button {
     align-items: center;
     /* Center vertically */
     height: 75px;
-    width: 350px;
+    width: 400px;
     font-size: 30px;
     font-weight: 800;
     font-family: poppins;
@@ -848,7 +876,6 @@ body.gradientBackground .gamebutton button {
     padding-left: 50px;
     padding-right: 50px;
     background-image: linear-gradient(to bottom right, #3565a9 0%, #458796 35%, #d29128 65%, #c9c934 100%);
-
     background-size: 100% 100%;
     /* Ensure background image covers the button */
     border-radius: 15px;
@@ -914,14 +941,14 @@ body.gradientBackground .MGSTXTTT {
 .roadtxt {
     font-family: ubuntu;
     padding: 50px;
-    display: inline-block;
     text-align: center;
     border-radius: 25px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     box-shadow: 0 0 50px rgb(0, 0, 0);
+    max-width: 40%; /* Adjust as needed */
+    margin: auto; /* Center horizontally */
+    position: relative; /* Change position to relative */
+    top: 50px; /* Adjust as needed */
+    bottom: 50px;
 }
 
 body.gradientBackground .roadtxt {
