@@ -10,35 +10,27 @@
     <script async src="https://arc.io/widget.min.js#KpYQhCTB"></script>
     <link href="/style.css" rel="stylesheet" type="text/css">
     <script src="settings.js" defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWD8SS29YZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    <nav class="navbar">
-        <div class="logo">
-            <a href="https://discord.gg/GPFwfVNEhn" target="_blank">
-                <img src="Icons/logo.png" alt="Sunset-Network Logo">
-                <span>Sunset-Network</span>
-            </a>
-        </div>
-        <ul>
-            <li><a href="/index.html"><i class="fa-solid fa-house fa-2xl"
-                        style="color: #000000; margin: 5px;"></i>Home</a></li>
-            <li><a href="/games.html"><i class="fa-solid fa-gamepad fa-2xl"
-                        style="color: #000000; margin: 5px;"></i>Games</a></li>
-            <li><a href="/discord.html"><i class="fa-brands fa-discord fa-2xl"
-                        style="color: #000000; margin: 5px;"></i>Discord</a></li>
-            <li><a href="/roadmap.html"><i class="fa-solid fa-map fa-2xl"
-                        style="color: #000000; margin: 5px;"></i>Roadmap</a></li>
-            <li><a href="/settings.html"><i class="fa-solid fa-gear fa-2xl"
-                        style="color: #000000; margin: 5px;"></i>Settings</a></li>
-            <li><a href="/developers&partners.html"><i class="fa-solid fa-users fa-2xl"
-                        style="color: #000000; margin: 5px;"></i>Developers</a></li>
-        </ul>
-    </nav>
-
-
+        gtag('config', 'G-PWD8SS29YZ');
+    </script>
 </head>
 
 <body class="home" onload="registerSW()">
-
+    <div class="navbar">
+        <img src="Icons/logo.png" alt="Sunset Logo " id="logo">
+        <a href="/index.html"><i class="fa-solid fa-house fa-2xl">&nbsp;</i>Home</a>
+        <a href="/games.html"><i class="fa-solid fa-gamepad fa-2xl">&nbsp;</i>Games</a>
+        <a href="/discord.html"><i class="fa-brands fa-discord fa-2xl">&nbsp;</i>Discord</a>
+        <a href="/roadmap.html"><i class="fa-solid fa-map fa-2xl">&nbsp;</i>Roadmap</a>
+        <a href="/settings.html"><i class="fa-solid fa-gear fa-2xl">&nbsp;</i>Settings</a>
+        <a href="/developers&partners.html"><i class="fa-solid fa-users fa-2xl">&nbsp;</i>Developers</a>
+    </div>
 
     <main>
         <!--im shit at coding -->
@@ -73,7 +65,7 @@
     <script src="register-sw.js" async></script>
 
     <script src="hotkey.js"></script>
-    
+
 </body>
 
-</html>
+</html

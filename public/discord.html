@@ -10,32 +10,37 @@
     <script async src="https://arc.io/widget.min.js#KpYQhCTB"></script>
     <link href="/style.css" rel="stylesheet" type="text/css">
     <script src="settings.js" defer></script>
-
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWD8SS29YZ"></script>
     <script src="https://kit.fontawesome.com/52676eb1e5.js" crossorigin="anonymous"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PWD8SS29YZ');
+    </script>
 </head>
 
 <body class="discordp" onload="registerSW()">
 
-    <div class="discord-embed-container">
-        <iframe class="discord-embed" src="/uv/hvtrs8%2F-e%2Cwkdeevbmt%2Cim%2Fahcnlens-100%3A623263072%3B01525-10174%3B5645723%3B84266" allow="clipboard-write; fullscreen"></iframe>
+    <div class="dback">
+        <a class="dbackbutton" href="/index.html">
+            <i class="fa-solid fa-angle-left fa-2xl"></i>
+        </a>
     </div>
 
-    <div>
-        <div class="dback">
-            <a class="dbackbutton" href="/index.html">
-                <div style="padding: 10px; color: #3565a9; border-radius: 10px; text-shadow: 2px 2px 2px #888; box-shadow: 3px 3px 3px #111111; box-shadow: 3px 3px 3px #111111;">
-                    <i class="fa-solid fa-angle-left fa-2xl" style="color: #000000;"></i>
-                    Go Back
-                    </i>
-                </div>
-            </a>
-        </div>
+    <div class="discord-embed-container">
+        <iframe class="discord-embed"
+            src="/uv/service/hvtrs8%2F-e%2Cwkdeevbmt%2Cim%2Fahcnlens-100%3A623263072%3B01525-10174%3B5645723%3B84266"
+            allow="clipboard-write; fullscreen"></iframe>
     </div>
 
     <script src="uv/uv.bundle.js" defer></script>
     <script src="uv/uv.config.js" defer></script>
-    <script src="/search.js" defer></script>
-    <script src="/index.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="index.js" defer></script>
     <script src="register-sw.js" async></script>
     <script src="hotkey.js"></script>
 

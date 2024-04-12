@@ -7,22 +7,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 /* global styles */
+* {
+    transition: 0.4s;
+}
 
 /* Style the scrollbar track */
 ::-webkit-scrollbar-track {
-    background-color: #131313; /* Light grey background */
+    background-color: #131313;
+    /* Light grey background */
 }
 
 /* Style the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-    background-color: #5e5e5e; /* Grey thumb color */
-    border-radius: 10px; /* Rounded borders */
-    width: 10px; /* Fixed width for the scrollbar */
+    background-color: #5e5e5e;
+    /* Grey thumb color */
+    border-radius: 10px;
+    /* Rounded borders */
+    width: 10px;
+    /* Fixed width for the scrollbar */
 }
 
 /* Hide the scrollbar when not interacting with it */
 ::-webkit-scrollbar {
-    width: 10px; /* Fixed width for the scrollbar */
+    width: 10px;
+    /* Fixed width for the scrollbar */
 }
 
 
@@ -53,7 +61,8 @@ button {
 /* foreground for page */
 body,
 main {
-    margin: 0;
+    margin-top: 5%;
+
 }
 
 /* Coming soon */
@@ -116,130 +125,111 @@ body.gradientBackground .SNdiscord {
 
 .SNdiscord:hover {
     transform: scale(1.05);
-    transition: 0.5s;
 }
 
 /* navbar */
-
 .navbar {
-    position: relative;
-    /* Ensure relative positioning for absolute positioning within */
-    display: flex;
+    top: 0;
+    font-size: 22px;
+    left: 0;
+    right: 0;
+    padding: 5px 25px;
     justify-content: center;
-    /* Center items horizontally */
-    align-items: center;
-    /* Center items vertically */
-    padding: 2px;
-    /* Increase padding for a thicker orange part */
-    background-color: #e38811;
-    border-radius: 0 0 10px 10px;
-    /* Round bottom-left and bottom-right corners */
-}
-
-/* Logo */
-.logo {
+    width: full;
+    z-index: 100;
     position: absolute;
-    /* Position absolutely */
-    left: 20px;
-    /* Adjust left position as needed */
     display: flex;
     align-items: center;
-    /* Center items vertically */
-    font-family: 'Rubik', sans-serif;
-    /* Update font family */
-    font-size: larger;
-    font-weight: bold;
-    /* Update font weight */
-    color: #FFD700;
-    /* Update text color */
-}
-
-.logo img {
-    width: 40px;
-    /* Adjust logo width as needed */
-    height: auto;
-    /* Maintain aspect ratio */
-    margin-right: 10px;
-    /* Add space between logo and text */
-    border: 2.5px solid #FFD700;
-    /* Add border around logo */
-    border-radius: 50%;
-    /* Make logo circular */
-}
-
-.navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    /* Center contents horizontally */
-    align-items: center;
-    /* Center items vertically */
-}
-
-.navbar li {
-    margin-right: 25px;
-    /* Increase spacing between links */
+    text-align: center;
+    background-color: #e38811;
+    font-weight: 600px;
+    margin-bottom: 10px;
 }
 
 .navbar a {
-    text-decoration: none;
     color: #FFD700;
-    font-size: 18px;
-    /* Adjust font size as needed */
-    font-weight: bold;
-    /* Make text bold */
-    font-family: 'Poppins', sans-serif;
-    /* Use Poppins font */
-    display: flex;
-    align-items: center;
-    /* Center items vertically */
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Poppins;
 }
 
-.navbar ul li,
-.navbar ul li a {
-    display: block;
-    padding: 8px;
-    transition: 0.5s;
-}
-
-.navbar:hover ul li:hover,
-.navbar:hover ul li:hover a {
-    transition: 0.5s;
-    background-color: darkorange;
-    border-radius: 10px;
+.navbar a:hover {
+    background-color: #ff9100;
     transform: scale(1.05);
+    border-radius: 10px;
 }
 
-/* Adjust navbar colors based on the theme */
+.navbar i {
+    color: black;
+}
 
-body.gradientBackground .logo img {
-    border: 2.5px solid white;
+#logo {
+    margin-right: 10px;
+    width: 40px;
+    border: solid #FFD700;
+    border-radius: 50px;
+}
+
+@media screen and (max-width: 664px) {
+    #logo {
+        display: none;
+    }
+
+    .navbar {
+        font-size: 200;
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+
+    body {
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width: 911px) {
+    body {
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width: 497px) {
+    body {
+        margin-top: 30%;
+    }
+}
+
+@media screen and (max-width: 377px) {
+    body {
+        margin-top: 35%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    body {
+        margin-top: 37%;
+    }
 }
 
 body.gradientBackground .navbar {
-    background-color: #3565a9;
+    background-color: #0056b3;
 }
-
 
 body.gradientBackground .navbar a {
-    color: #fff;
+    color: #8dbfee;
 }
 
-body.gradientBackground .logo {
-    color: #fff;
+body.gradientBackground #logo {
+    border: solid #8dbfee;
 }
 
-body.gradientBackground .navbar:hover ul li:hover a {
-    background-color: #5a97d8;
-    /* Change background color on hover in dark mode */
+body.gradientBackground .navbar a:hover {
+    background-color: #3e7cd3;
 }
 
-body.gradientBackground .navbar:hover ul li:hover {
-    background-color: #5a97d8;
-    /* Change background color on hover in dark mode */
-
+body.gradientBackground .navbar i {
+    color: #ffffffd3;
 }
 
 /* gradient background */
@@ -376,8 +366,18 @@ a:visited {
     display: none;
 }
 
+.card {
+    min-width: 360px;
+    min-height: 300px;
+}
+
 .tab.active {
+
     display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
 .SETtext {
@@ -431,8 +431,8 @@ a:visited {
 
 .Selecthotkeyyyyy {
     text-align: center;
-    width: auto;
-    height: auto;
+    width: 350px;
+    height: 300px;
     padding: 30px;
     border-radius: 25px;
     background-color: #ffffff2a;
@@ -442,8 +442,7 @@ a:visited {
 
 .redirectchoice {
     text-align: center;
-    width: auto;
-    height: auto;
+    height: 275px;
     padding: 30px;
     border-radius: 25px;
     background-color: #ffffff2a;
@@ -451,7 +450,11 @@ a:visited {
     margin: 10px;
 }
 
-#redirect-url-input{
+#open-tab-btn :hover{
+    transform: scale(1.5);
+}
+
+#redirect-url-input {
     color: black;
     padding: 10px;
     font-size: 20px;
@@ -584,11 +587,63 @@ a:visited {
     cursor: pointer;
 }
 
+.cloaksettings {
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    border-radius: 25px;
+    background-color: #ffffff2a;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+    margin: 10px;
+}
+
+#presetSelect {
+    padding: 10px 1px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 725;
+    background-color: #007bff;
+    color: white;
+    border: black 3px solid;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
 .Baseofsbutton button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
     transition: 0.5s;
 }
+
+.upload-CLicon {
+    padding: 10px;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 750;
+}
+
+#cloakcustom {
+    margin-top: 100px;
+    text-align: center;
+    height: 100px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #ffffff2a;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+    margin: 5px;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 750;
+}
+
+
+#faviconPreview {
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 750;
+}
+
 
 body.gradientBackground .STXT {
     color: white;
@@ -614,7 +669,25 @@ body.gradientBackground #change-URL-btn {
     border: rgba(60, 214, 235, 0.75) 3px solid;
 }
 
+body.gradientBackground .cloaksettings {
+    box-shadow: 0 0 30px rgba(153, 243, 255);
+}
+
+body.gradientBackground #cloakcustom {
+    box-shadow: 0 0 30px rgba(153, 243, 255);
+}
+
 body.gradientBackground #hotkey-input {
+    color: black;
+    background: rgba(255, 255, 255, 0.1);
+    border: rgba(60, 214, 235, 0.75) 3px solid;
+}
+
+body.gradientBackground #presetSelect {
+    border: rgba(60, 214, 235, 0.75) 3px solid;
+}
+
+body.gradientBackground #redirect-url-input {
     color: black;
     background: rgba(255, 255, 255, 0.1);
     border: rgba(60, 214, 235, 0.75) 3px solid;
@@ -627,6 +700,10 @@ body {
 
 body.gradientBackground {
     background-image: linear-gradient(#070720, #0f296a, #3565a9);
+}
+
+body.gradientBackground #redirect-url-input {
+    border: rgba(60, 214, 235, 0.75) 3px solid;
 }
 
 body.gradientBackground .SETtext {
@@ -904,12 +981,14 @@ body.gradientBackground .MGSTXTTT {
 /* discord page*/
 
 .discord-embed-container {
+    border-radius: 5px;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    left: 50vw;
+    transform: translateX(-50%);
+    width: 95vw;
+    height: 85vh;
     overflow: hidden;
+    margin-bottom: 50px;
 }
 
 .discord-embed {
@@ -918,23 +997,37 @@ body.gradientBackground .MGSTXTTT {
     border: none;
 }
 
-.dback {
-    margin: 10px;
-    position: absolute;
-    float: left;
-    border-radius: 10px;
-    background-color: rgba(128, 128, 128, 0.6);
-    font-family: poppins;
-    font-weight: 700;
-    font-size: 35px;
-    color: #3565a9;
+/* Preserve your changes and add the hover effect */
+.dbackbutton {
+    position: fixed;
+    top: 40px;
+    left: 30px;
+    margin-left: 25px;
+    /* Adjust margin if needed */
+    border: #000000 solid 3px;
+    display: inline-block;
+    transform: scale(2.5);
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+    z-index: 999;
+    /* Ensure the icon is above the iframe */
 }
 
-.dbackbutton :hover {
-    background-color: rgba(255, 255, 255, 0.6);
-    transform: scale(1.025);
-    transition: 0.5s;
+.dbackbutton:hover {
+    transform: scale(2.2);
 }
+
+.dbackbutton i {
+    color: #ffffff;
+    /* Set icon color */
+    font-size: 24px;
+    filter: drop-shadow(0 0 10px white);
+    /* Add glowing effect */
+}
+
 
 /* roadmap page */
 
@@ -944,10 +1037,14 @@ body.gradientBackground .MGSTXTTT {
     text-align: center;
     border-radius: 25px;
     box-shadow: 0 0 50px rgb(0, 0, 0);
-    max-width: 40%; /* Adjust as needed */
-    margin: auto; /* Center horizontally */
-    position: relative; /* Change position to relative */
-    top: 50px; /* Adjust as needed */
+    max-width: 40%;
+    /* Adjust as needed */
+    margin: auto;
+    /* Center horizontally */
+    position: relative;
+    /* Change position to relative */
+    top: 50px;
+    /* Adjust as needed */
     bottom: 50px;
 }
 
@@ -991,9 +1088,16 @@ body.gradientBackground .roadtxt {
     flex-wrap: wrap
 }
 
-.dctylayout {
+.dcdevlayout {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap
+}
+
+.dctylayout {
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap
 }
 
 .tydev {
@@ -1206,6 +1310,26 @@ body.gradientBackground .partner {
 }
 
 .KittyCatClub button {
+    display: inline-flex;
+    margin: 15px;
+    height: auto;
+    width: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 900;
+    transform: scaleY(1.2);
+    border: 5px solid;
+    border-radius: 10px;
+    color: white;
+    background: navy;
+    border-color: black;
+    font-family: Ubuntu;
+    padding-right: 10px;
+}
+
+.Molkify button {
     display: inline-flex;
     margin: 15px;
     height: auto;
