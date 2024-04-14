@@ -83,9 +83,24 @@
                     <br>
                     <button id="change-URL-btn">Change Redirect URL</button>
                 </div>
+                
+                <div class="cloaksettings card">
+                    <p class="SBT">Preset Cloaks</p>
+                    <select id="presetSelect">
+                        <option value="google">Google</option>
+                        <option value="gmail">Gmail</option>
+                        <option value="classroom">Google Classroom</option>
+                        <option value="drive">Google Drive</option>
+                        <option value="custom">Custom</option>
+                    </select>
 
+                    <div id="cloakcustom">
+                        <input class="upload-CLicon" type="file" id="faviconInput" accept="image/*">
+                        <img id="faviconPreview" src="#" alt="Preview">
 
-
+                        <input type="text" id="customTitleInput" placeholder="Custom Title" style="display: none;">
+                    </div>
+                    
                 </div>
 
             </div>
