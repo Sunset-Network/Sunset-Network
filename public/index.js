@@ -48,29 +48,25 @@ class crypts {
   }
 }
 
-// Search function definition
 function search(input) {
-  input = input.trim();  // Trim the input to remove any whitespace
-  // Retrieve the search engine URL template from localStorage or use default
+  input = input.trim();
   const searchTemplate = localStorage.getItem('engine') || 'https://google.com/search?q=%s';
 
   try {
-    // Try to treat the input as a URL
     return new URL(input).toString();
   } catch (err) {
-    // The input was not a valid URL; attempt to prepend 'http://'
     try {
       const url = new URL(`http://${input}`);
       if (url.hostname.includes(".")) {
         return url.toString();
       }
-      throw new Error('Invalid hostname');  // Force jump to the next catch block
+      throw new Error('Invalid hostname');
     } catch (err) {
-      // The input was not a valid URL - treat as a search query
       return searchTemplate.replace("%s", encodeURIComponent(input));
     }
   }
 }
+
 if ('serviceWorker' in navigator) {
   var proxySetting = localStorage.getItem('proxy') || 'uv';
   let swConfig = {
@@ -92,4 +88,46 @@ if ('serviceWorker' in navigator) {
     .catch((error) => {
       console.error('ServiceWorker registration failed:', error);
     });
+}
+
+var proxySetting = 'uv';
+let swConfig = {
+  'uv': { file: '/uv/sw.js', config: __uv$config }
+};
+
+let { file: swFile, config: swConfigSettings } = swConfig[proxySetting];
+
+async function registerSW() {
+  if (!navigator.serviceWorker)
+    throw new Error("Your browser doesn't support service workers.");
+
+  // Ultraviolet has a stock `sw.js` script.
+  await navigator.serviceWorker.register(stockSW, {
+    scope: __uv$config.prefix,
+  });
+}
+
+function launch(val) {
+  var proxySetting = 'uv';
+  let swConfig = {
+    'uv': { file: '/uv/sw.js', config: __uv$config }
+  };
+
+  let { file: swFile, config: swConfigSettings } = swConfig[proxySetting];
+
+  window.navigator.serviceWorker
+      .register(swFile, { scope: swConfigSettings.prefix })
+      .then(() => {
+          let url = val.trim();
+          if (!ifUrl(url)) url = "https://www.google.com/search?q=" + url;
+          else if (!(url.startsWith("https://") || url.startsWith("http://")))
+              url = "https://" + url;
+          var uvUrl = __uv$config.prefix + __uv$config.encodeUrl(url);
+          location.href = uvUrl;
+      });
+}
+
+function ifUrl(val = "") {
+  const urlPattern = /^(http(s)?:\/\/)?([\w-]+\.)+[\w]{2,}(\/.*)?$/;
+  return urlPattern.test(val);
 }

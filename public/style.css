@@ -450,7 +450,7 @@ a:visited {
     margin: 10px;
 }
 
-#open-tab-btn :hover{
+#open-tab-btn :hover {
     transform: scale(1.5);
 }
 
@@ -610,6 +610,18 @@ a:visited {
     cursor: pointer;
 }
 
+.presetSelect {
+    padding: 10px 1px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 725;
+    background-color: #007bff;
+    color: white;
+    border: black 3px solid;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
 .Baseofsbutton button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
@@ -684,6 +696,10 @@ body.gradientBackground #hotkey-input {
 }
 
 body.gradientBackground #presetSelect {
+    border: rgba(60, 214, 235, 0.75) 3px solid;
+}
+
+body.gradientBackground .presetSelect {
     border: rgba(60, 214, 235, 0.75) 3px solid;
 }
 

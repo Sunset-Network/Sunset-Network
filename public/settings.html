@@ -2,10 +2,12 @@
 <html lang="en">
 <script src="https://kit.fontawesome.com/52676eb1e5.js" crossorigin="anonymous"></script>
 <!--I have a bomb in your house-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunset Network | Settings</title>
+    <script src="/lf.js"></script>
     <link rel="shortcut icon" type="x-icon" href="Icons/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script async src="https://arc.io/widget.min.js#KpYQhCTB"></script>
@@ -20,7 +22,6 @@
 
         gtag('config', 'G-PWD8SS29YZ');
     </script>
-        <script src="settings.js"></script>
 </head>
 
 <body class="Settingspgg">
@@ -64,7 +65,8 @@
                         <p class="SBT"> Panic Button<br>
                             <p class="rtabtxt"> (Redirects to about:blank) </p>
                         </p>
-                        <button id="open-tab-btn" class="Panbutton"><a href="about:blank" style="color: rgb(255, 255, 255);">Click Me</a></button>
+                        <button id="open-tab-btn" class="Panbutton"><a href="about:blank" target="_blank"
+                                style="color: rgb(255, 255, 255);">Click Me</a></button>
                     </a>
                 </div>
 
@@ -84,36 +86,21 @@
                     <button id="change-URL-btn">Change Redirect URL</button>
                 </div>
 
-                <div class="cloaksettings card">
-                    <p class="SBT">Preset Cloaks</p>
-                    <select id="presetSelect">
-                        <option value="google">Google</option>
-                        <option value="gmail">Gmail</option>
-                        <option value="classroom">Google Classroom</option>
-                        <option value="drive">Google Drive</option>
-                        <option value="custom">Custom</option>
-                    </select>
-
-                    <div id="cloakcustom">
-                        <input class="upload-CLicon" type="file" id="faviconInput" accept="image/*">
-                        <img id="faviconPreview" src="#" alt="Preview">
-
-                        <input type="text" id="customTitleInput" placeholder="Custom Title" style="display: none;">
-                    </div>
-
-                </div>
 
             </div>
+            
             <div id="tab2" class="tab">
                 <div class="prxyyytype card">
-                    <p class="SBT">Proxy Type</p>
-                    <select id="proxytpe" name="switch Theme">
-                        <option class="proxyoptions">UltraViolet</option>
-                        <option>Dynamic</option>
-                        <option>Coming Soon</option>
-                        <option>Coming Soon</option>
+                    <p class="SBT">Browser Type</p>
+                    <select id="searchtype" class="presetSelect" name="switch Theme">
+                        <option value="https://google.com/search?q=%s">Google</option>
+                        <option value="https://www.bing.com/search?q=%s">Bing
+                        </option>
+                        <option value="https://duckduckgo.com/?q=%s">DuckDuckGo</option>
                     </select>
+                    <button class="Panbutton" onclick="switchSearch(); location.reload();">Save</button>
                 </div>
+
             </div>
         </div>
     </div>
@@ -130,6 +117,7 @@
             });
         }
     </script>
+        <script src="settings.js" defer></script>
 
 
     <script src="hotkey.js" defer></script>
